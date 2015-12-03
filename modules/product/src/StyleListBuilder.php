@@ -23,7 +23,6 @@ class StyleListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Style ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -33,7 +32,6 @@ class StyleListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\product\Entity\Style */
-    $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $this->getLabel($entity),
       new Url(
