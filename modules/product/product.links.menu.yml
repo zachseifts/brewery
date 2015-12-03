@@ -1,0 +1,12 @@
+# Product menu items definition
+entity.brewery_product.collection:
+  title: 'Product list'
+  route_name: entity.brewery_product.collection
+  description: 'List Product entities'
+
+brewery_product.admin.structure.settings:
+  title: Product settings
+  description: 'Configure Product entities'
+  route_name: brewery_product.settings
+  parent: system.admin_structure
+

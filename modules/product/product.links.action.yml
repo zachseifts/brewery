@@ -1,0 +1,7 @@
+entity.brewery_product.add_form:
+  route_name: entity.brewery_product.add_form
+  title: 'Add Product'
+  appears_on:
+    - entity.brewery_product.collection
+    - entity.brewery_product.canonical
+

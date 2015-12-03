@@ -1,0 +1,5 @@
+name: brewery
+type: module
+description: A brewery in a module.
+core: 8.x
+package: Brewery

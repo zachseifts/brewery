@@ -1,0 +1,22 @@
+# Product routing definition
+brewery_product.settings_tab:
+  route_name: brewery_product.settings
+  title: 'Settings'
+  base_route: brewery_product.settings
+
+entity.brewery_product.canonical:
+  route_name: entity.brewery_product.canonical
+  base_route: entity.brewery_product.canonical
+  title: 'View'
+
+entity.brewery_product.edit_form:
+  route_name: entity.brewery_product.edit_form
+  base_route: entity.brewery_product.canonical
+  title: Edit
+
+entity.brewery_product.delete_form:
+  route_name:  entity.brewery_product.delete_form
+  base_route:  entity.brewery_product.canonical
+  title: Delete
+  weight: 10
+
