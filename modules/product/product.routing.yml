@@ -122,3 +122,65 @@ brewery_product_type.settings:
   options:
     _admin_route: TRUE
 
+
+# Style routing definition
+entity.brewery_style.canonical:
+  path: '/admin/brewery_style/{brewery_style}'
+  defaults:
+    _entity_view: 'brewery_style'
+    _title: 'Style'
+  requirements:
+    _entity_access: 'brewery_style.view'
+  options:
+    _admin_route: TRUE
+
+entity.brewery_style.collection:
+  path: '/admin/brewery_style'
+  defaults:
+    _entity_list: 'brewery_style'
+    _title: 'Style list'
+  requirements:
+    _permission: 'view style entities'
+  options:
+    _admin_route: TRUE
+
+entity.brewery_style.add_form:
+  path: '/admin/brewery_style/add'
+  defaults:
+    _entity_form: brewery_style.add
+    _title: 'Add Style'
+  requirements:
+    _permission: 'add style entities'
+  options:
+    _admin_route: TRUE
+
+entity.brewery_style.edit_form:
+  path: '/admin/brewery_style/{brewery_style}/edit'
+  defaults:
+    _entity_form: brewery_style.edit
+    _title: 'Edit Style'
+  requirements:
+    _permission: 'edit style entities'
+  options:
+    _admin_route: TRUE
+
+entity.brewery_style.delete_form:
+  path: '/admin/brewery_style/{brewery_style}/delete'
+  defaults:
+    _entity_form: brewery_style.delete
+    _title: 'Delete Style'
+  requirements:
+    _permission: 'delete style entities'
+  options:
+    _admin_route: TRUE
+
+brewery_style.settings:
+  path: 'admin/structure/brewery_style'
+  defaults:
+   _form: '\Drupal\product\Entity\Form\StyleSettingsForm'
+   _title: 'Style settings'
+  requirements:
+    _permission: 'administer style entities'
+  options:
+    _admin_route: TRUE
+

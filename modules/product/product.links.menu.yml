@@ -22,3 +22,15 @@ brewery_product_type.admin.structure.settings:
   route_name: brewery_product_type.settings
   parent: system.admin_structure
 
+# Style menu items definition
+entity.brewery_style.collection:
+  title: 'Style list'
+  route_name: entity.brewery_style.collection
+  description: 'List Style entities'
+
+brewery_style.admin.structure.settings:
+  title: Style settings
+  description: 'Configure Style entities'
+  route_name: brewery_style.settings
+  parent: system.admin_structure
+

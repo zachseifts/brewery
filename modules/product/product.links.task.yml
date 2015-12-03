@@ -42,3 +42,25 @@ entity.brewery_product_type.delete_form:
   title: Delete
   weight: 10
 
+# Style routing definition
+brewery_style.settings_tab:
+  route_name: brewery_style.settings
+  title: 'Settings'
+  base_route: brewery_style.settings
+
+entity.brewery_style.canonical:
+  route_name: entity.brewery_style.canonical
+  base_route: entity.brewery_style.canonical
+  title: 'View'
+
+entity.brewery_style.edit_form:
+  route_name: entity.brewery_style.edit_form
+  base_route: entity.brewery_style.canonical
+  title: Edit
+
+entity.brewery_style.delete_form:
+  route_name:  entity.brewery_style.delete_form
+  base_route:  entity.brewery_style.canonical
+  title: Delete
+  weight: 10
+

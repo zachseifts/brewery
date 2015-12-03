@@ -50,6 +50,11 @@ function brewery_toolbar() {
       '#title' => t('Product types'),
       '#url' => Url::fromRoute('entity.brewery_product_type.collection'),
     ),
+    'product_styles' => array(
+      '#type' => 'link',
+      '#title' => t('Product styles'),
+      '#url' => Url::fromRoute('entity.brewery_style.collection'),
+    ),
   );
 
   $items['brewery'] = [

@@ -12,3 +12,10 @@ entity.brewery_product_type.add_form:
     - entity.brewery_product_type.collection
     - entity.brewery_product_type.canonical
 
+entity.brewery_style.add_form:
+  route_name: entity.brewery_style.add_form
+  title: 'Add Style'
+  appears_on:
+    - entity.brewery_style.collection
+    - entity.brewery_style.canonical
+

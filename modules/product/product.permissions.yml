@@ -28,3 +28,18 @@ edit product type entities:
 
 view product type entities:
   title: 'View Product type entities'
+add style entities:
+  title: 'Create new Style entities'
+
+administer style entities:
+  title: 'Administer Style entities'
+  description: 'Allow to access the administration form to configure Style entities.'
+
+delete style entities:
+  title: 'Delete Style entities'
+
+edit style entities:
+  title: 'Edit Style entities'
+
+view style entities:
+  title: 'View Style entities'
