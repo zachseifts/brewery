@@ -1,0 +1,5 @@
+drupal.brewery.toolbar:
+  version: VERSION
+  css:
+    theme:
+      css/brewery.icons.css: {}

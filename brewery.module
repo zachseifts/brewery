@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -30,4 +31,48 @@ function brewery_theme() {
   $theme = [];
 
   return $theme;
+}
+
+/**
+ * Implements hook_toolbar()
+ */
+function brewery_toolbar() {
+  $items = [];
+
+  $items['brewery'] = [
+    '#type' => 'toolbar_item',
+    '#weight' => 100,
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Brewery'),
+      '#url' => Url::fromRoute('entity.brewery_product.collection'),
+      '#attributes' => [
+        'title' => t('Brewery settings'),
+        'class' => ['toolbar-icon', 'toolbar-icon-menu'],
+      ],
+    ],
+    'tray' => [
+      '#theme' => 'item_list',
+      '#items' => [
+        [
+          '#type' => 'link',
+          '#title' => t('All products'),
+          '#url' => Url::fromRoute('entity.brewery_product.collection'),
+          '#attributes' => [
+            'class' => ['toolbar-menu'],
+          ],
+        ],
+        [
+          '#type' => 'link',
+          '#title' => t('Product types'),
+          '#url' => Url::fromRoute('entity.brewery_product_type.collection'),
+          '#attributes' => [
+            'class' => ['toolbar-menu'],
+          ],
+        ],
+      ],
+    ]
+  ];
+
+  return $items;
 }
