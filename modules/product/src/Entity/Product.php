@@ -173,9 +173,29 @@ class Product extends ContentEntityBase implements ProductInterface {
       ->setDescription(t('The time that the entity was last edited.'));
 
     $fields['type'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Type'))
-      ->setDescription(t('The product type.'))
-      ->setSetting('target_type', 'brewery_product_type');
+      ->setLabel(t('Product type'))
+      ->setDescription(t('The type of this product'))
+      ->setRevisionable(TRUE)
+      ->setSetting('target_type', 'brewery_product_type')
+      ->setSetting('handler', 'default')
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'author',
+        'weight' => 0,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 5,
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'size' => '60',
+          'autocomplete_type' => 'tags',
+          'placeholder' => '',
+        ),
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
     return $fields;
   }
