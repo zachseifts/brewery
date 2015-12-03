@@ -39,6 +39,19 @@ function brewery_theme() {
 function brewery_toolbar() {
   $items = [];
 
+  $links = array(
+    'products' => array(
+      '#type' => 'link',
+      '#title' => t('All products'),
+      '#url' => Url::fromRoute('entity.brewery_product.collection'),
+    ),
+    'product_types' => array(
+      '#type' => 'link',
+      '#title' => t('Product types'),
+      '#url' => Url::fromRoute('entity.brewery_product_type.collection'),
+    ),
+  );
+
   $items['brewery'] = [
     '#type' => 'toolbar_item',
     '#weight' => 100,
@@ -53,23 +66,9 @@ function brewery_toolbar() {
     ],
     'tray' => [
       '#theme' => 'item_list',
-      '#items' => [
-        [
-          '#type' => 'link',
-          '#title' => t('All products'),
-          '#url' => Url::fromRoute('entity.brewery_product.collection'),
-          '#attributes' => [
-            'class' => ['toolbar-menu'],
-          ],
-        ],
-        [
-          '#type' => 'link',
-          '#title' => t('Product types'),
-          '#url' => Url::fromRoute('entity.brewery_product_type.collection'),
-          '#attributes' => [
-            'class' => ['toolbar-menu'],
-          ],
-        ],
+      '#items' => $links,
+      '#attributes' => [
+        'class' => array('toolbar-menu'),
       ],
     ]
   ];
