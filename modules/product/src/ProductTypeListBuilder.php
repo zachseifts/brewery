@@ -23,7 +23,6 @@ class ProductTypeListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Product type ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -33,7 +32,6 @@ class ProductTypeListBuilder extends EntityListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     /* @var $entity \Drupal\product\Entity\ProductType */
-    $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $this->getLabel($entity),
       new Url(
