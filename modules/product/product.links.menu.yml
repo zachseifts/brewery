@@ -10,3 +10,15 @@ brewery_product.admin.structure.settings:
   route_name: brewery_product.settings
   parent: system.admin_structure
 
+# Product type menu items definition
+entity.brewery_product_type.collection:
+  title: 'Product type list'
+  route_name: entity.brewery_product_type.collection
+  description: 'List Product type entities'
+
+brewery_product_type.admin.structure.settings:
+  title: Product type settings
+  description: 'Configure Product type entities'
+  route_name: brewery_product_type.settings
+  parent: system.admin_structure
+

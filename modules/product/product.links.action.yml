@@ -5,3 +5,10 @@ entity.brewery_product.add_form:
     - entity.brewery_product.collection
     - entity.brewery_product.canonical
 
+entity.brewery_product_type.add_form:
+  route_name: entity.brewery_product_type.add_form
+  title: 'Add Product type'
+  appears_on:
+    - entity.brewery_product_type.collection
+    - entity.brewery_product_type.canonical
+

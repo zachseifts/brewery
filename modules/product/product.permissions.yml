@@ -13,3 +13,18 @@ edit product entities:
 
 view product entities:
   title: 'View Product entities'
+add product type entities:
+  title: 'Create new Product type entities'
+
+administer product type entities:
+  title: 'Administer Product type entities'
+  description: 'Allow to access the administration form to configure Product type entities.'
+
+delete product type entities:
+  title: 'Delete Product type entities'
+
+edit product type entities:
+  title: 'Edit Product type entities'
+
+view product type entities:
+  title: 'View Product type entities'
