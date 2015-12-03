@@ -87,6 +87,34 @@ class Product extends ContentEntityBase implements ProductInterface {
   /**
    * {@inheritdoc}
    */
+  public function getABV() {
+    return $this->get('abv')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getIBUs() {
+    return $this->get('ibu')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getType() {
+    return $this->get('type')->entity;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getStyle() {
+    return $this->get('style')->entity;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function setOwnerId($uid) {
     $this->set('user_id', $uid);
     return $this;

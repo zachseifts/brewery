@@ -24,6 +24,10 @@ class ProductListBuilder extends EntityListBuilder {
    */
   public function buildHeader() {
     $header['name'] = $this->t('Name');
+    $header['style'] = $this->t('Style');
+    $header['type'] = $this->t('Type');
+    $header['abv'] = $this->t('ABV');
+    $header['ibu'] = $this->t('IBUs');
     return $header + parent::buildHeader();
   }
 
@@ -40,6 +44,10 @@ class ProductListBuilder extends EntityListBuilder {
         )
       )
     );
+    $row['style'] = $entity->getStyle()->get('name')->value;
+    $row['type'] = $entity->getType()->get('name')->value;
+    $row['abv'] = $entity->getABV() . '%';
+    $row['ibu'] = $entity->getIBUs();
     return $row + parent::buildRow($entity);
   }
 

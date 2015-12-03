@@ -18,6 +18,36 @@ use Drupal\user\EntityOwnerInterface;
  * @ingroup product
  */
 interface ProductInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
-  // Add get/set methods for your configuration properties here.
 
+  /**
+   * Gets the product's AVB.
+   *
+   * @return string
+   *   The product's ABV.
+   */
+   public function getABV();
+
+  /**
+   * Gets the product's IBUs.
+   *
+   * @return string
+   *   The product's IBUs.
+   */
+   public function getIBUs();
+
+  /**
+   * Gets the product's type.
+   *
+   * @return object
+   *   The product's type.
+   */
+   public function getType();
+
+  /**
+   * Gets the product's styl.
+   *
+   * @return object
+   *   The product's styl.
+   */
+   public function getStyle();
 }
