@@ -1,7 +1,7 @@
 
 # Product routing definition
 entity.brewery_product.canonical:
-  path: '/admin/brewery_product/{brewery_product}'
+  path: '/admin/brewery/product/{brewery_product}'
   defaults:
     _entity_view: 'brewery_product'
     _title: 'Product'
@@ -11,7 +11,7 @@ entity.brewery_product.canonical:
     _admin_route: TRUE
 
 entity.brewery_product.collection:
-  path: '/admin/brewery_product'
+  path: '/admin/brewery/product'
   defaults:
     _entity_list: 'brewery_product'
     _title: 'Product list'
@@ -21,7 +21,7 @@ entity.brewery_product.collection:
     _admin_route: TRUE
 
 entity.brewery_product.add_form:
-  path: '/admin/brewery_product/add'
+  path: '/admin/brewery/product/add'
   defaults:
     _entity_form: brewery_product.add
     _title: 'Add Product'
@@ -31,7 +31,7 @@ entity.brewery_product.add_form:
     _admin_route: TRUE
 
 entity.brewery_product.edit_form:
-  path: '/admin/brewery_product/{brewery_product}/edit'
+  path: '/admin/brewery/product/{brewery_product}/edit'
   defaults:
     _entity_form: brewery_product.edit
     _title: 'Edit Product'
@@ -41,7 +41,7 @@ entity.brewery_product.edit_form:
     _admin_route: TRUE
 
 entity.brewery_product.delete_form:
-  path: '/admin/brewery_product/{brewery_product}/delete'
+  path: '/admin/brewery/product/{brewery_product}/delete'
   defaults:
     _entity_form: brewery_product.delete
     _title: 'Delete Product'
@@ -63,7 +63,7 @@ brewery_product.settings:
 
 # ProductType routing definition
 entity.brewery_product_type.canonical:
-  path: '/admin/brewery_product_type/{brewery_product_type}'
+  path: '/admin/brewery/product/type/{brewery_product_type}'
   defaults:
     _entity_view: 'brewery_product_type'
     _title: 'Product type'
@@ -73,7 +73,7 @@ entity.brewery_product_type.canonical:
     _admin_route: TRUE
 
 entity.brewery_product_type.collection:
-  path: '/admin/brewery_product_type'
+  path: '/admin/brewery/product/type'
   defaults:
     _entity_list: 'brewery_product_type'
     _title: 'Product type list'
@@ -83,7 +83,7 @@ entity.brewery_product_type.collection:
     _admin_route: TRUE
 
 entity.brewery_product_type.add_form:
-  path: '/admin/brewery_product_type/add'
+  path: '/admin/brewery/product/type/add'
   defaults:
     _entity_form: brewery_product_type.add
     _title: 'Add Product type'
@@ -93,7 +93,7 @@ entity.brewery_product_type.add_form:
     _admin_route: TRUE
 
 entity.brewery_product_type.edit_form:
-  path: '/admin/brewery_product_type/{brewery_product_type}/edit'
+  path: '/admin/brewery/product/type/{brewery_product_type}/edit'
   defaults:
     _entity_form: brewery_product_type.edit
     _title: 'Edit Product type'
@@ -103,7 +103,7 @@ entity.brewery_product_type.edit_form:
     _admin_route: TRUE
 
 entity.brewery_product_type.delete_form:
-  path: '/admin/brewery_product_type/{brewery_product_type}/delete'
+  path: '/admin/brewery/product/type/{brewery_product_type}/delete'
   defaults:
     _entity_form: brewery_product_type.delete
     _title: 'Delete Product type'
@@ -113,7 +113,7 @@ entity.brewery_product_type.delete_form:
     _admin_route: TRUE
 
 brewery_product_type.settings:
-  path: 'admin/structure/brewery_product_type'
+  path: 'admin/structure/brewery/product/type'
   defaults:
    _form: '\Drupal\product\Entity\Form\ProductTypeSettingsForm'
    _title: 'Product type settings'
