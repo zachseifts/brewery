@@ -122,3 +122,11 @@ beer_style.settings:
   options:
     _admin_route: TRUE
 
+
+beer.beer_controller_index:
+  path: '/beer'
+  defaults:
+    _controller: '\Drupal\beer\Controller\BeerController::index'
+    _title: 'All beers'
+  requirements:
+    _permission: 'access content'
