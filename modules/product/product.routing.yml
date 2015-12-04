@@ -184,3 +184,11 @@ brewery_style.settings:
   options:
     _admin_route: TRUE
 
+
+product.product_listing_controller_index:
+  path: '/beer'
+  defaults:
+    _controller: '\Drupal\product\Controller\ProductListingController::index'
+    _title: 'Product Listing'
+  requirements:
+    _permission: 'access content'
