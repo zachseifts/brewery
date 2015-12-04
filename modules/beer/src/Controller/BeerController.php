@@ -31,7 +31,7 @@ class BeerController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('beer.listing')
+      $container->get('beer.service')
     );
   }
 
