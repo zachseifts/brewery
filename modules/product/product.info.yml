@@ -1,7 +1,0 @@
-name: product
-type: module
-description: Defines the Product entity and associated features.
-core: 8.x
-package: Brewery
-dependencies:
-  - brewery
