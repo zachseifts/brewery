@@ -1,0 +1,5 @@
+services:
+  beer.listing:
+    class: Drupal\beer\BeerService
+    arguments: []
+

@@ -27,7 +27,12 @@ function beer_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function beer_theme() {
-  $theme = [];
+  $theme = array();
+
+  $theme['beers'] = array(
+    'variables' => array('beers' => NULL),
+    'template' => 'beers'
+  );
 
   return $theme;
 }

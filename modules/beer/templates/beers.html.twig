@@ -1,0 +1,25 @@
+{#
+/**
+ * @file beers.html.twig
+ * Default theme implementation to present Beer listings.
+ *
+ * This template is used when viewing Beer listings
+ *
+ *
+ * Available variables:
+ * - beers: A list of beer items.
+ *
+ * @see template_preprocess_beer()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if beers %}
+<ul>
+  {% for beer in beers %}
+  <li>{{ beer.name.value }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no beers.</p>
+{% endif %}

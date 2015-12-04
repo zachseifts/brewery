@@ -8,6 +8,7 @@
 namespace Drupal\beer\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class BeerController.
@@ -15,6 +16,25 @@ use Drupal\Core\Controller\ControllerBase;
  * @package Drupal\beer\Controller
  */
 class BeerController extends ControllerBase {
+
+  protected $beerService;
+
+  /**
+   * Constructor.
+   */
+  public function __construct($beerService) {
+    $this->beerService = $beerService;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('beer.listing')
+    );
+  }
+
   /**
    * Index.
    *
@@ -22,10 +42,10 @@ class BeerController extends ControllerBase {
    *   Return Hello string.
    */
   public function index() {
-    return [
-        '#type' => 'markup',
-        '#markup' => $this->t('Implement method: index')
-    ];
+    return array(
+        '#theme' => 'beers',
+        '#beers' => $this->beerService->getAllBeers(),
+    );
   }
 
 }
