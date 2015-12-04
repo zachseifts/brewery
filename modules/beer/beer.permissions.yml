@@ -1,0 +1,30 @@
+add beer entities:
+  title: 'Create new Beer entities'
+
+administer beer entities:
+  title: 'Administer Beer entities'
+  description: 'Allow to access the administration form to configure Beer entities.'
+
+delete beer entities:
+  title: 'Delete Beer entities'
+
+edit beer entities:
+  title: 'Edit Beer entities'
+
+view beer entities:
+  title: 'View Beer entities'
+add beer style entities:
+  title: 'Create new Beer style entities'
+
+administer beer style entities:
+  title: 'Administer Beer style entities'
+  description: 'Allow to access the administration form to configure Beer style entities.'
+
+delete beer style entities:
+  title: 'Delete Beer style entities'
+
+edit beer style entities:
+  title: 'Edit Beer style entities'
+
+view beer style entities:
+  title: 'View Beer style entities'

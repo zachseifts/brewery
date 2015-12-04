@@ -1,0 +1,14 @@
+entity.beer.add_form:
+  route_name: entity.beer.add_form
+  title: 'Add Beer'
+  appears_on:
+    - entity.beer.collection
+    - entity.beer.canonical
+
+entity.beer_style.add_form:
+  route_name: entity.beer_style.add_form
+  title: 'Add Beer style'
+  appears_on:
+    - entity.beer_style.collection
+    - entity.beer_style.canonical
+

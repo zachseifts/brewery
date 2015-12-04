@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains beer.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function beer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the beer module.
+    case 'help.page.beer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module for managing beers.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function beer_theme() {
+  $theme = [];
+
+  return $theme;
+}

@@ -1,0 +1,24 @@
+# Beer menu items definition
+entity.beer.collection:
+  title: 'Beer list'
+  route_name: entity.beer.collection
+  description: 'List Beer entities'
+
+beer.admin.structure.settings:
+  title: Beer settings
+  description: 'Configure Beer entities'
+  route_name: beer.settings
+  parent: system.admin_structure
+
+# Beer style menu items definition
+entity.beer_style.collection:
+  title: 'Beer style list'
+  route_name: entity.beer_style.collection
+  description: 'List Beer style entities'
+
+beer_style.admin.structure.settings:
+  title: Beer style settings
+  description: 'Configure Beer style entities'
+  route_name: beer_style.settings
+  parent: system.admin_structure
+

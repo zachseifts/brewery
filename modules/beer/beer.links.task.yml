@@ -1,0 +1,44 @@
+# Beer routing definition
+beer.settings_tab:
+  route_name: beer.settings
+  title: 'Settings'
+  base_route: beer.settings
+
+entity.beer.canonical:
+  route_name: entity.beer.canonical
+  base_route: entity.beer.canonical
+  title: 'View'
+
+entity.beer.edit_form:
+  route_name: entity.beer.edit_form
+  base_route: entity.beer.canonical
+  title: Edit
+
+entity.beer.delete_form:
+  route_name:  entity.beer.delete_form
+  base_route:  entity.beer.canonical
+  title: Delete
+  weight: 10
+
+# Beer style routing definition
+beer_style.settings_tab:
+  route_name: beer_style.settings
+  title: 'Settings'
+  base_route: beer_style.settings
+
+entity.beer_style.canonical:
+  route_name: entity.beer_style.canonical
+  base_route: entity.beer_style.canonical
+  title: 'View'
+
+entity.beer_style.edit_form:
+  route_name: entity.beer_style.edit_form
+  base_route: entity.beer_style.canonical
+  title: Edit
+
+entity.beer_style.delete_form:
+  route_name:  entity.beer_style.delete_form
+  base_route:  entity.beer_style.canonical
+  title: Delete
+  weight: 10
+

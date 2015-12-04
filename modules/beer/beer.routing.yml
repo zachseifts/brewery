@@ -1,0 +1,124 @@
+
+# Beer routing definition
+entity.beer.canonical:
+  path: '/admin/beer/{beer}'
+  defaults:
+    _entity_view: 'beer'
+    _title: 'Beer'
+  requirements:
+    _entity_access: 'beer.view'
+  options:
+    _admin_route: TRUE
+
+entity.beer.collection:
+  path: '/admin/beer'
+  defaults:
+    _entity_list: 'beer'
+    _title: 'Beer list'
+  requirements:
+    _permission: 'view beer entities'
+  options:
+    _admin_route: TRUE
+
+entity.beer.add_form:
+  path: '/admin/beer/add'
+  defaults:
+    _entity_form: beer.add
+    _title: 'Add Beer'
+  requirements:
+    _permission: 'add beer entities'
+  options:
+    _admin_route: TRUE
+
+entity.beer.edit_form:
+  path: '/admin/beer/{beer}/edit'
+  defaults:
+    _entity_form: beer.edit
+    _title: 'Edit Beer'
+  requirements:
+    _permission: 'edit beer entities'
+  options:
+    _admin_route: TRUE
+
+entity.beer.delete_form:
+  path: '/admin/beer/{beer}/delete'
+  defaults:
+    _entity_form: beer.delete
+    _title: 'Delete Beer'
+  requirements:
+    _permission: 'delete beer entities'
+  options:
+    _admin_route: TRUE
+
+beer.settings:
+  path: 'admin/structure/beer'
+  defaults:
+   _form: '\Drupal\beer\Entity\Form\BeerSettingsForm'
+   _title: 'Beer settings'
+  requirements:
+    _permission: 'administer beer entities'
+  options:
+    _admin_route: TRUE
+
+
+# BeerStyle routing definition
+entity.beer_style.canonical:
+  path: '/admin/beer_style/{beer_style}'
+  defaults:
+    _entity_view: 'beer_style'
+    _title: 'Beer style'
+  requirements:
+    _entity_access: 'beer_style.view'
+  options:
+    _admin_route: TRUE
+
+entity.beer_style.collection:
+  path: '/admin/beer_style'
+  defaults:
+    _entity_list: 'beer_style'
+    _title: 'Beer style list'
+  requirements:
+    _permission: 'view beer style entities'
+  options:
+    _admin_route: TRUE
+
+entity.beer_style.add_form:
+  path: '/admin/beer_style/add'
+  defaults:
+    _entity_form: beer_style.add
+    _title: 'Add Beer style'
+  requirements:
+    _permission: 'add beer style entities'
+  options:
+    _admin_route: TRUE
+
+entity.beer_style.edit_form:
+  path: '/admin/beer_style/{beer_style}/edit'
+  defaults:
+    _entity_form: beer_style.edit
+    _title: 'Edit Beer style'
+  requirements:
+    _permission: 'edit beer style entities'
+  options:
+    _admin_route: TRUE
+
+entity.beer_style.delete_form:
+  path: '/admin/beer_style/{beer_style}/delete'
+  defaults:
+    _entity_form: beer_style.delete
+    _title: 'Delete Beer style'
+  requirements:
+    _permission: 'delete beer style entities'
+  options:
+    _admin_route: TRUE
+
+beer_style.settings:
+  path: 'admin/structure/beer_style'
+  defaults:
+   _form: '\Drupal\beer\Entity\Form\BeerStyleSettingsForm'
+   _title: 'Beer style settings'
+  requirements:
+    _permission: 'administer beer style entities'
+  options:
+    _admin_route: TRUE
+
