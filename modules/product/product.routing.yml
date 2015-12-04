@@ -1,14 +1,14 @@
 
 # Product routing definition
 entity.brewery_product.canonical:
-  path: '/admin/brewery/product/{brewery_product}'
+  path: '/beer/{brewery_product}'
   defaults:
     _entity_view: 'brewery_product'
     _title: 'Product'
   requirements:
     _entity_access: 'brewery_product.view'
   options:
-    _admin_route: TRUE
+    _admin_route: FALSE
 
 entity.brewery_product.collection:
   path: '/admin/brewery/product'

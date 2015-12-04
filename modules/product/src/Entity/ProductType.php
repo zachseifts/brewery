@@ -44,9 +44,9 @@ use Drupal\user\UserInterface;
  *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "canonical" = "/admin/brewery_product_type/{brewery_product_type}",
- *     "edit-form" = "/admin/brewery_product_type/{brewery_product_type}/edit",
- *     "delete-form" = "/admin/brewery_product_type/{brewery_product_type}/delete"
+ *     "canonical" = "/admin/brewery/product/type/{brewery_product_type}",
+ *     "edit-form" = "/admin/brewery/product/type/{brewery_product_type}/edit",
+ *     "delete-form" = "/admin/brewery/product/type/{brewery_product_type}/delete"
  *   },
  *   field_ui_base_route = "brewery_product_type.settings"
  * )
