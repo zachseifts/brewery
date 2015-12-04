@@ -87,6 +87,26 @@ class Beer extends ContentEntityBase implements BeerInterface {
   /**
    * {@inheritdoc}
    */
+  public function getABV() {
+    return $this->get('abv')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getIBUs() {
+    return $this->get('ibu')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getStyle() {
+    return $this->get('style')->entity;
+  }
+  /**
+   * {@inheritdoc}
+   */
   public function setOwnerId($uid) {
     $this->set('user_id', $uid);
     return $this;
@@ -171,6 +191,71 @@ class Beer extends ContentEntityBase implements BeerInterface {
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
+
+    $fields['style'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Beer style'))
+      ->setDescription(t('The style of this beer'))
+      ->setRevisionable(TRUE)
+      ->setSetting('target_type', 'beer_style')
+      ->setSetting('handler', 'default')
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'author',
+        'weight' => 0,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 5,
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'size' => '60',
+          'autocomplete_type' => 'tags',
+          'placeholder' => '',
+        ),
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['abv'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('ABV'))
+      ->setDescription(t('The abv of this beer.'))
+      ->setSettings(array(
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -4,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['ibu'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('IBUs'))
+      ->setDescription(t('The IBUs of this beer.'))
+      ->setSettings(array(
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -4,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
     return $fields;
   }

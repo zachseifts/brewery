@@ -40,32 +40,27 @@ function brewery_toolbar() {
   $items = [];
 
   $links = array(
-    'products' => array(
+    'beer' => array(
       '#type' => 'link',
-      '#title' => t('All products'),
-      '#url' => Url::fromRoute('entity.brewery_product.collection'),
+      '#title' => t('All beers'),
+      '#url' => Url::fromRoute('entity.beer.collection'),
     ),
-    'product_types' => array(
+    'beer_styles' => array(
       '#type' => 'link',
-      '#title' => t('Product types'),
-      '#url' => Url::fromRoute('entity.brewery_product_type.collection'),
-    ),
-    'product_styles' => array(
-      '#type' => 'link',
-      '#title' => t('Product styles'),
-      '#url' => Url::fromRoute('entity.brewery_style.collection'),
+      '#title' => t('Beer styles'),
+      '#url' => Url::fromRoute('entity.beer_style.collection'),
     ),
   );
 
-  $items['brewery'] = [
+  $items['beer'] = [
     '#type' => 'toolbar_item',
     '#weight' => 100,
     'tab' => [
       '#type' => 'link',
-      '#title' => t('Brewery'),
-      '#url' => Url::fromRoute('entity.brewery_product.collection'),
+      '#title' => t('Manage beer'),
+      '#url' => Url::fromRoute('entity.beer.collection'),
       '#attributes' => [
-        'title' => t('Brewery settings'),
+        'title' => t('Beer settings'),
         'class' => ['toolbar-icon', 'toolbar-icon-menu'],
       ],
     ],

@@ -63,7 +63,7 @@ beer.settings:
 
 # BeerStyle routing definition
 entity.beer_style.canonical:
-  path: '/admin/beer_style/{beer_style}'
+  path: '/admin/beer/style/{beer_style}'
   defaults:
     _entity_view: 'beer_style'
     _title: 'Beer style'
@@ -73,7 +73,7 @@ entity.beer_style.canonical:
     _admin_route: TRUE
 
 entity.beer_style.collection:
-  path: '/admin/beer_style'
+  path: '/admin/beer/style'
   defaults:
     _entity_list: 'beer_style'
     _title: 'Beer style list'
@@ -83,7 +83,7 @@ entity.beer_style.collection:
     _admin_route: TRUE
 
 entity.beer_style.add_form:
-  path: '/admin/beer_style/add'
+  path: '/admin/beer/style/add'
   defaults:
     _entity_form: beer_style.add
     _title: 'Add Beer style'
@@ -93,7 +93,7 @@ entity.beer_style.add_form:
     _admin_route: TRUE
 
 entity.beer_style.edit_form:
-  path: '/admin/beer_style/{beer_style}/edit'
+  path: '/admin/beer/style/{beer_style}/edit'
   defaults:
     _entity_form: beer_style.edit
     _title: 'Edit Beer style'
@@ -103,7 +103,7 @@ entity.beer_style.edit_form:
     _admin_route: TRUE
 
 entity.beer_style.delete_form:
-  path: '/admin/beer_style/{beer_style}/delete'
+  path: '/admin/beer/style/{beer_style}/delete'
   defaults:
     _entity_form: beer_style.delete
     _title: 'Delete Beer style'
@@ -113,7 +113,7 @@ entity.beer_style.delete_form:
     _admin_route: TRUE
 
 beer_style.settings:
-  path: 'admin/structure/beer_style'
+  path: 'admin/structure/beer/style'
   defaults:
    _form: '\Drupal\beer\Entity\Form\BeerStyleSettingsForm'
    _title: 'Beer style settings'
