@@ -41,7 +41,8 @@ use Drupal\user\UserInterface;
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
- *     "uuid" = "uuid"
+ *     "uuid" = "uuid",
+ *     "status" = "status"
  *   },
  *   links = {
  *     "canonical" = "/admin/beer/{beer}",
@@ -82,6 +83,20 @@ class Beer extends ContentEntityBase implements BeerInterface {
    */
   public function getOwnerId() {
     return $this->get('user_id')->target_id;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function isPublished() {
+    return (bool) $this->getEntityKey('status');
+  }
+  /**
+   * {@inheritdoc}
+   */
+  public function setPublished($published) {
+    $this->set('status', (bool) $published);
+    return $this;
   }
 
   /**
@@ -191,6 +206,13 @@ class Beer extends ContentEntityBase implements BeerInterface {
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
+
+    $fields['status'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Published'))
+      ->setDescription(t('Is this beer published?'))
+      ->setDefaultValue(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDisplayConfigurable('form', TRUE);
 
     $fields['style'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Beer style'))

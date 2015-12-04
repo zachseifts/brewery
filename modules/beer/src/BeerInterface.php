@@ -21,7 +21,27 @@ interface BeerInterface extends ContentEntityInterface, EntityChangedInterface, 
   // Add get/set methods for your configuration properties here.
 
   /**
-   * Gets the product's AVB.
+   * Get whether the beer is published.
+   *
+   * Unpublished products are only visible to their authors and administrators.
+   *
+   * @return bool
+   *   TRUE if the product is published, FALSE otherwise.
+   */
+  public function isPublished();
+
+  /**
+   * Sets whether the beer is published.
+   *
+   * @param bool $published
+   *   Whether the product is published.
+   *
+   * @return $this
+   */
+  public function setPublished($published);
+
+  /**
+   * Gets the beer's AVB.
    *
    * @return string
    *   The product's ABV.
@@ -29,7 +49,7 @@ interface BeerInterface extends ContentEntityInterface, EntityChangedInterface, 
    public function getABV();
 
   /**
-   * Gets the product's IBUs.
+   * Gets the beer's IBUs.
    *
    * @return string
    *   The product's IBUs.
@@ -37,10 +57,10 @@ interface BeerInterface extends ContentEntityInterface, EntityChangedInterface, 
    public function getIBUs();
 
   /**
-   * Gets the product's styl.
+   * Gets the beer's style.
    *
    * @return object
-   *   The product's styl.
+   *   The product's style.
    */
    public function getStyle();
 }

@@ -27,6 +27,7 @@ class BeerListBuilder extends EntityListBuilder {
     $header['style'] = $this->t('Style');
     $header['abv'] = $this->t('ABV');
     $header['ibu'] = $this->t('IBUs');
+    $header['published'] = $this->t('Published');
     return $header + parent::buildHeader();
   }
 
@@ -46,6 +47,7 @@ class BeerListBuilder extends EntityListBuilder {
     $row['style'] = $entity->getStyle()->get('name')->value;
     $row['abv'] = $entity->getABV() . '%';
     $row['ibu'] = $entity->getIBUs();
+    $row['published'] = $entity->isPublished();
     return $row + parent::buildRow($entity);
   }
 
