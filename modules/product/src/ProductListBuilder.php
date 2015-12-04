@@ -39,7 +39,7 @@ class ProductListBuilder extends EntityListBuilder {
     $row['name'] = $this->l(
       $this->getLabel($entity),
       new Url(
-        'entity.brewery_product.edit_form', array(
+        'entity.brewery_product.canonical', array(
           'brewery_product' => $entity->id(),
         )
       )
